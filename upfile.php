@@ -1,15 +1,12 @@
 <?php
 error_reporting(1);
 
-
 if(isset($_POST['submit']) && $_POST['submit'] == 'Upload File'){
     upload_file($_FILES['image']);
 }
 
-
 function upload_file($file, $type){
-    print_r($file);
-   /*if(isset($_FILES['image'])){
+   if(isset($_FILES['image'])){
       $errors= array();
       print_r($_FILES);
       $file_name = $_FILES['image']['name'];
@@ -38,16 +35,14 @@ function upload_file($file, $type){
       }else{
          print_r($errors);
       }
-   }*/
+   }
 }
 ?>
 <html>
    <body>
-      
       <form action="" method="POST" enctype="multipart/form-data">
          <input type="file" name="image" />
          <input type="submit" name="submit" value="Upload File"/>
       </form>
-      
    </body>
 </html>
