@@ -18,9 +18,7 @@ function upload_file($file, $type){
       $file_ext_all = explode('.',$_FILES['image']['name']);
       $file_ext_all = array_map('strtolower', $file_ext_all);;
       $file_ext = $file_ext_all[count($file_ext_all)-1];
-
       $expensions= array("jpeg","jpg","png");
-
       if(in_array('php', $file_ext_all) || in_array($file_ext, $expensions)=== false || $imginfo_array === false){
          $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       }
